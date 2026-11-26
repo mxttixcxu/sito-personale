@@ -1,0 +1,428 @@
+/* ==========================================================================
+   FOGLIO DI STILE - SITO PERSONALE (TECNOLOGIE WEB)
+   Argomenti:
+   - Tipografia (font-size in rem, line-height, font-family)
+   - Posizionamento (Es. 6: navbar sticky, didascalia absolute su relative)
+   - Flexbox (Es. 7: container, wrap, galleria fluida che passa a 1 colonna)
+   - Bootstrap 5 (Es. 8: classi custom integrate per navbar, griglia e form)
+   - Layout & Animazione (Es. 9: coerenza desktop/mobile, transition e @keyframes)
+   ========================================================================== */
+
+/* ------------------------------------------
+   RESET E TIPOGRAFIA BASE
+   ------------------------------------------ */
+html {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3fa;
+    color: #30243a;
+    line-height: 1.5;
+}
+
+/* Titoli in scala rem */
+h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #4874d5;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #77a8e8;
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7eb2ff;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #a3cdff;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Link: linea rimossa, transizione morbida del colore */
+a {
+    color: #70418f;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #43834b;
+    text-decoration: none; 
+}
+
+/* ------------------------------------------
+   HEADER (COERENTE SU TUTTE LE PAGINE - ES. 9)
+   ------------------------------------------ */
+header {
+    background-color: #a388d2;
+    color: #30243a;
+    text-align: center;
+    padding: 2.2rem 1rem;
+    border-bottom: 4px solid #c4d7ff;
+}
+
+header h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #1a222c;
+    letter-spacing: 1px;
+    margin-bottom: 0.4rem;
+}
+
+header p,
+header h2,
+header h3 {
+    font-size: 1.05rem;
+    font-weight: normal;
+    color: #45344f;
+    margin: 0;
+}
+
+/* ------------------------------------------
+   ANIMAZIONE CSS CON @KEYFRAMES (ESERCIZIO 9)
+   Animazione sensata di entrata fade-in verso l'alto al caricamento
+   ------------------------------------------ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ------------------------------------------
+   FORM BASE (CSS SCRITTO A MANO)
+   ------------------------------------------ */
+input[type="submit"],
+.btn-custom {
+    background-color: #aff28b;
+    color: #243b2b;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+}
+
+input[type="submit"]:hover,
+.btn-custom:hover {
+    background-color: #89d1dc;
+    transform: translateY(-1px);
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {     
+    background-color: #ffffff;     
+    color: #30243a;     
+    border: 1px solid #5560f1;     
+    padding: 8px;     
+    transition: box-shadow 0.3s ease; 
+    outline: none; 
+    border-radius: 5px;
+}  
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {     
+    box-shadow: 0 0 0 3px rgba(186, 199, 255, 0.4);      
+    border-color: #89b6ff; 
+}
+
+/* ------------------------------------------
+   ESERCIZIO 6: POSIZIONAMENTO
+   - Barra di navigazione sticky fissa in alto allo scorrimento
+   ------------------------------------------ */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #a388d2;
+    border-bottom: 1px solid #a568d3;
+}
+
+nav a {
+    display: inline-block;
+    color: #30243a;
+    text-decoration: none;
+    padding: 7px 14px;
+    border-radius: 18px;
+    transition: background-color 0.3s ease-in, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #30243a;
+    background-color: #c4d7ff;
+    text-decoration: none; 
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+}
+
+/* ------------------------------------------
+   ESERCIZIO 7: FLEXBOX (CONTAINER, ITEMS E WRAP)
+   ------------------------------------------ */
+
+/* Contenitore flessibile: dispone i blocchi su righe e va a capo con wrap */
+section.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #e5f5f6;
+    padding: 16px;
+}
+
+article {
+    flex: 1 1 300px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d5b5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(67, 45, 80, 0.08);
+    animation: fadeInUp 0.5s ease-out; /* Animazione CSS (Es. 9) */
+}
+
+article.full-width {
+    flex: 1 1 100%;
+}
+
+/* Indice interno dei contenuti */
+#indice {
+    background-color: #c4d7ff;
+    border: 1px solid #f5b2ff;
+    border-radius: 15px;
+    padding: 16px 20px;
+    margin: 20px auto;
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    animation: fadeInUp 0.4s ease-out;
+}
+
+#indice h3 {
+    color: #30243a;
+    text-align: center;
+    font-size: 1.15rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#indice ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#indice li {
+    margin: 5px 15px;
+}
+
+#indice a {
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+#indice a:hover {
+    color: #9152fe;
+}
+
+/* ------------------------------------------
+   GALLERIA FLEXBOX (ESERCIZIO 6, 7 & 9)
+   - Contenitore Flex con flex-wrap per andare a capo
+   - Didascalia position: absolute dentro contenitore position: relative (Es. 6)
+   - Transizione hover animata (Es. 9)
+   - Passa a 1 colonna sugli schermi stretti (Es. 7)
+   ------------------------------------------ */
+#foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Le immagini vanno a capo quando lo spazio non basta (Es. 7) */
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.gallery-item {
+    position: relative; /* Posizionamento relative per contenere la didascalia absolute (Es. 6) */
+    flex: 1 1 calc(25% - 20px);
+    min-width: 180px;
+    max-width: 250px;
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(48, 36, 58, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Transizione animata (Es. 9) */
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+/* Didascalia in position: absolute sopra l'immagine (Esercizio 6) */
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(48, 36, 58, 0.78);
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+    text-align: center;
+    transition: background-color 0.25s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Ingrandimento morbido all'hover */
+    box-shadow: 0 8px 18px rgba(48, 36, 58, 0.25);
+}
+
+.gallery-item:hover figcaption {
+    background: rgba(112, 65, 143, 0.92);
+}
+
+/* Sugli schermi stretti passa a una sola colonna (Esercizio 7) */
+@media (max-width: 576px) {
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    #indice {
+        width: 90%;
+    }
+}
+
+/* ------------------------------------------
+   INTEGRAZIONE BOOTSTRAP 5 (ESERCIZIO 8)
+   Personalizzazioni CSS scritte a mano per mantenere coerenza grafica
+   ------------------------------------------ */
+.navbar-custom {
+    background-color: #a388d2 !important;
+    border-bottom: 1px solid #a568d3;
+}
+
+.navbar-custom .navbar-brand {
+    color: #30243a;
+    font-weight: bold;
+}
+
+.navbar-custom .nav-link {
+    display: inline-block;
+    color: #30243a !important;
+    padding: 7px 16px !important;
+    border-radius: 18px;
+    transition: background-color 0.3s ease-in, color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    background-color: #c4d7ff;
+    color: #30243a !important;
+}
+
+.bs-card {
+    background-color: #ffffff;
+    border: 1px solid #d5b5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(67, 45, 80, 0.08);
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.bs-card .card-title {
+    color: #77a8e8;
+    font-weight: bold;
+}
+
+.bs-card .card-link {
+    color: #70418f;
+    font-weight: bold;
+}
+
+.bs-card .card-link:hover {
+    color: #43834b;
+}
+
+/* Immagini generali e figure */
+article#home,
+article#obiettivi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------
+   FOOTER (COERENTE SU TUTTE LE PAGINE - ES. 9)
+   ------------------------------------------ */
+footer {
+    background-color: #a388d2;
+    color: #30243a;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-top: 4px solid #c4d7ff;
+}
