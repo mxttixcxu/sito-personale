@@ -26,3 +26,7 @@ Progetto per il laboratorio di Tecnologie Web (A.A. 2026/2027), Università di B
 ## Autore
 
 Mattia (Mxttix) — Università di Bologna
+
+**Corso:** Informatica
+
+**Anno:** 2026-27
