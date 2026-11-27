@@ -1,5 +1,4 @@
-/* Tipografia */
-
+/* tipografia base */
 html {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -13,28 +12,33 @@ body {
     line-height: 1.5;
 }
 
-/* Titoli in scala rem */
+/* titoli in rem */
 h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     color: #4874d5;
     margin: 0;
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #77a8e8;
 }
 
+.page-title {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #7eb2ff;
 }
 
 h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #a3cdff;
 }
@@ -43,15 +47,7 @@ p {
     font-size: 1rem;
 }
 
-.page-title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-/* Link */
-
-
+/* link */
 a {
     color: #70418f;
     text-decoration: none;
@@ -60,25 +56,24 @@ a {
 
 a:hover {
     color: #43834b;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-/* Header */
-
+/* header */
 header {
     background-color: #a388d2;
     color: #30243a;
     text-align: center;
-    padding: 2.2rem 1rem;
+    padding: 2rem 1rem;
     border-bottom: 4px solid #c4d7ff;
 }
 
 header h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: bold;
     color: #1a222c;
     letter-spacing: 1px;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
 }
 
 header p,
@@ -90,7 +85,7 @@ header h3 {
     margin: 0;
 }
 
-/* Animazione con KeyFrames */
+/* animazione fade in */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -102,9 +97,7 @@ header h3 {
     }
 }
 
-/* ------------------------------------------
-   FORM BASE (CSS SCRITTO A MANO)
-   ------------------------------------------ */
+/* form e pulsanti */
 input[type="submit"],
 .btn-custom {
     background-color: #aff28b;
@@ -121,29 +114,29 @@ input[type="submit"],
 input[type="submit"]:hover,
 .btn-custom:hover {
     background-color: #89d1dc;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
-input[type="text"], 
-input[type="email"], 
-textarea {     
-    background-color: #ffffff;     
-    color: #30243a;     
-    border: 1px solid #5560f1;     
-    padding: 8px;     
-    transition: box-shadow 0.3s ease; 
-    outline: none; 
+input[type="text"],
+input[type="email"],
+textarea {
+    background-color: #ffffff;
+    color: #30243a;
+    border: 1px solid #5560f1;
+    padding: 8px;
+    transition: box-shadow 0.3s ease;
+    outline: none;
     border-radius: 5px;
-}  
-
-input[type="text"]:focus, 
-input[type="email"]:focus, 
-textarea:focus {     
-    box-shadow: 0 0 0 3px rgba(186, 199, 255, 0.4);      
-    border-color: #89b6ff; 
 }
 
-/* Navbar Sticky */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(186, 199, 255, 0.4);
+    border-color: #89b6ff;
+}
+
+/* navbar sticky */
 nav {
     position: sticky;
     top: 0;
@@ -156,8 +149,8 @@ nav a {
     display: inline-block;
     color: #30243a;
     text-decoration: none;
-    padding: 7px 14px;
-    border-radius: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
     transition: background-color 0.3s ease-in, color 0.3s ease;
 }
 
@@ -165,7 +158,7 @@ nav a:hover,
 nav a.active {
     color: #30243a;
     background-color: #c4d7ff;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 nav ul {
@@ -178,16 +171,14 @@ nav ul {
     padding: 12px;
 }
 
-/* Sezioni e articoli */
-
-/* Contenitore flessibile: dispone i blocchi su righe e va a capo con wrap */
+/* flex container per gli articoli */
 section.flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #e5f5f6;
-    padding: 16px;
+    padding: 15px;
 }
 
 article {
@@ -205,12 +196,12 @@ article.full-width {
     flex: 1 1 100%;
 }
 
-/* Indice interno dei contenuti */
+/* indice interno */
 #indice {
     background-color: #c4d7ff;
     border: 1px solid #f5b2ff;
     border-radius: 15px;
-    padding: 16px 20px;
+    padding: 15px 20px;
     margin: 20px auto;
     text-align: center;
     width: 60%;
@@ -221,7 +212,7 @@ article.full-width {
 #indice h3 {
     color: #30243a;
     text-align: center;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     margin: 0 0 10px 0;
     padding: 0;
 }
@@ -249,7 +240,7 @@ article.full-width {
     color: #9152fe;
 }
 
-/* Galleria */ 
+/* galleria flexbox */
 #foto {
     display: flex;
     flex-direction: column;
@@ -259,7 +250,7 @@ article.full-width {
 .gallery-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     width: 100%;
@@ -267,13 +258,13 @@ article.full-width {
 }
 
 .gallery-item {
-    position: relative; 
+    position: relative;
     flex: 1 1 calc(25% - 20px);
     min-width: 180px;
     max-width: 250px;
     margin: 0;
     border-radius: 8px;
-    overflow: hidden; 
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(48, 36, 58, 0.12);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
@@ -286,7 +277,7 @@ article.full-width {
     transition: transform 0.25s ease;
 }
 
-/* Didascalia in position: absolute sopra l'immagine */
+/* didascalia absolute su relative */
 .gallery-item figcaption {
     position: absolute;
     bottom: 0;
@@ -294,7 +285,7 @@ article.full-width {
     right: 0;
     background: rgba(48, 36, 58, 0.78);
     color: #ffffff;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding: 6px 8px;
     text-align: center;
     transition: background-color 0.25s ease;
@@ -309,22 +300,19 @@ article.full-width {
     background: rgba(112, 65, 143, 0.92);
 }
 
-/* Sugli schermi stretti passa a una sola colonna */
+/* mobile: galleria a 1 colonna */
 @media (max-width: 576px) {
     .gallery-item {
         flex: 1 1 100%;
         max-width: 100%;
     }
-    
+
     #indice {
         width: 90%;
     }
 }
 
-/* ------------------------------------------
-   INTEGRAZIONE BOOTSTRAP 5
-   Personalizzazioni CSS scritte a mano per mantenere coerenza grafica
-   ------------------------------------------ */
+/* personalizzazione bootstrap 5 */
 .navbar-custom {
     background-color: #a388d2;
     border-bottom: 1px solid #a568d3;
@@ -336,14 +324,14 @@ article.full-width {
 }
 
 .navbar-custom .navbar-nav {
-    gap: 20rem;
+    gap: 2rem;
 }
 
 .navbar-custom .nav-link {
     display: inline-block;
     color: #30243a;
-    padding: 7px 16px;
-    border-radius: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
     transition: background-color 0.3s ease-in, color 0.3s ease;
 }
 
@@ -375,7 +363,7 @@ article.full-width {
     color: #43834b;
 }
 
-/* Immagini generali e figure */
+/* immagini generali e figure */
 article#home,
 article#obiettivi {
     display: flex;
@@ -395,7 +383,7 @@ img {
     height: auto;
 }
 
-/* Footer */
+/* footer */
 footer {
     background-color: #a388d2;
     color: #30243a;

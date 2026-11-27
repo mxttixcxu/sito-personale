@@ -26,7 +26,7 @@ Il progetto copre progressivamente tutti i concetti e i requisiti affrontati nel
 
 ### 1. Tipografia e Unità Relative (Esercizio 5)
 * **Root font-size**: impostato `html { font-size: 16px; }` per il calcolo uniforme di tutte le dimensioni in `rem`.
-* **Gerarchia scalare**: titoli (`h1: 2.2rem`, `h2: 1.6rem`, `h3: 1.3rem`, `h4: 1.1rem`) e paragrafi (`1rem`) dimensionati in `rem` per garantire scalabilità e accessibilità.
+* **Gerarchia scalare**: titoli (`h1: 2rem`, `h2: 1.5rem`, `h3: 1.2rem`, `h4: 1rem`) e paragrafi (`1rem`) dimensionati in `rem` per garantire scalabilità e accessibilità.
 * **Leggibilità**: definizione di `line-height: 1.5`, pesi font differenziati (`font-weight: bold / normal`) e fallback universale con `Arial, Helvetica, sans-serif`.
 
 ### 2. Posizionamento (Esercizio 6)
