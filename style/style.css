@@ -1,16 +1,5 @@
-/* ==========================================================================
-   FOGLIO DI STILE - SITO PERSONALE (TECNOLOGIE WEB)
-   Argomenti:
-   - Tipografia (font-size in rem, line-height, font-family)
-   - Posizionamento (Es. 6: navbar sticky, didascalia absolute su relative)
-   - Flexbox (Es. 7: container, wrap, galleria fluida che passa a 1 colonna)
-   - Bootstrap 5 (Es. 8: classi custom integrate per navbar, griglia e form)
-   - Layout & Animazione (Es. 9: coerenza desktop/mobile, transition e @keyframes)
-   ========================================================================== */
+/* Tipografia */
 
-/* ------------------------------------------
-   RESET E TIPOGRAFIA BASE
-   ------------------------------------------ */
 html {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -38,12 +27,6 @@ h2 {
     color: #77a8e8;
 }
 
-.page-title {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 h3 {
     font-size: 1.3rem;
     font-weight: bold;
@@ -60,7 +43,15 @@ p {
     font-size: 1rem;
 }
 
-/* Link: linea rimossa, transizione morbida del colore */
+.page-title {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Link */
+
+
 a {
     color: #70418f;
     text-decoration: none;
@@ -72,9 +63,8 @@ a:hover {
     text-decoration: none; 
 }
 
-/* ------------------------------------------
-   HEADER (COERENTE SU TUTTE LE PAGINE - ES. 9)
-   ------------------------------------------ */
+/* Header */
+
 header {
     background-color: #a388d2;
     color: #30243a;
@@ -94,20 +84,17 @@ header h1 {
 header p,
 header h2,
 header h3 {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: normal;
     color: #45344f;
     margin: 0;
 }
 
-/* ------------------------------------------
-   ANIMAZIONE CSS CON @KEYFRAMES (ESERCIZIO 9)
-   Animazione sensata di entrata fade-in verso l'alto al caricamento
-   ------------------------------------------ */
+/* Animazione con KeyFrames */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(18px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -156,10 +143,7 @@ textarea:focus {
     border-color: #89b6ff; 
 }
 
-/* ------------------------------------------
-   ESERCIZIO 6: POSIZIONAMENTO
-   - Barra di navigazione sticky fissa in alto allo scorrimento
-   ------------------------------------------ */
+/* Navbar Sticky */
 nav {
     position: sticky;
     top: 0;
@@ -194,9 +178,7 @@ nav ul {
     padding: 12px;
 }
 
-/* ------------------------------------------
-   ESERCIZIO 7: FLEXBOX (CONTAINER, ITEMS E WRAP)
-   ------------------------------------------ */
+/* Sezioni e articoli */
 
 /* Contenitore flessibile: dispone i blocchi su righe e va a capo con wrap */
 section.flex-container {
@@ -216,7 +198,7 @@ article {
     border: 1px solid #d5b5e9;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(67, 45, 80, 0.08);
-    animation: fadeInUp 0.5s ease-out; /* Animazione CSS (Es. 9) */
+    animation: fadeInUp 0.5s ease-out;
 }
 
 article.full-width {
@@ -267,13 +249,7 @@ article.full-width {
     color: #9152fe;
 }
 
-/* ------------------------------------------
-   GALLERIA FLEXBOX (ESERCIZIO 6, 7 & 9)
-   - Contenitore Flex con flex-wrap per andare a capo
-   - Didascalia position: absolute dentro contenitore position: relative (Es. 6)
-   - Transizione hover animata (Es. 9)
-   - Passa a 1 colonna sugli schermi stretti (Es. 7)
-   ------------------------------------------ */
+/* Galleria */ 
 #foto {
     display: flex;
     flex-direction: column;
@@ -283,23 +259,23 @@ article.full-width {
 .gallery-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Le immagini vanno a capo quando lo spazio non basta (Es. 7) */
+    flex-wrap: wrap; 
     justify-content: center;
-    gap: 16px;
+    gap: 15px;
     width: 100%;
     margin-top: 15px;
 }
 
 .gallery-item {
-    position: relative; /* Posizionamento relative per contenere la didascalia absolute (Es. 6) */
+    position: relative; 
     flex: 1 1 calc(25% - 20px);
     min-width: 180px;
     max-width: 250px;
     margin: 0;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden; 
     box-shadow: 0 4px 10px rgba(48, 36, 58, 0.12);
-    transition: transform 0.25s ease, box-shadow 0.25s ease; /* Transizione animata (Es. 9) */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .gallery-item img {
@@ -310,7 +286,7 @@ article.full-width {
     transition: transform 0.25s ease;
 }
 
-/* Didascalia in position: absolute sopra l'immagine (Esercizio 6) */
+/* Didascalia in position: absolute sopra l'immagine */
 .gallery-item figcaption {
     position: absolute;
     bottom: 0;
@@ -325,7 +301,7 @@ article.full-width {
 }
 
 .gallery-item:hover {
-    transform: scale(1.05); /* Ingrandimento morbido all'hover */
+    transform: scale(1.05);
     box-shadow: 0 8px 18px rgba(48, 36, 58, 0.25);
 }
 
@@ -333,7 +309,7 @@ article.full-width {
     background: rgba(112, 65, 143, 0.92);
 }
 
-/* Sugli schermi stretti passa a una sola colonna (Esercizio 7) */
+/* Sugli schermi stretti passa a una sola colonna */
 @media (max-width: 576px) {
     .gallery-item {
         flex: 1 1 100%;
@@ -346,11 +322,11 @@ article.full-width {
 }
 
 /* ------------------------------------------
-   INTEGRAZIONE BOOTSTRAP 5 (ESERCIZIO 8)
+   INTEGRAZIONE BOOTSTRAP 5
    Personalizzazioni CSS scritte a mano per mantenere coerenza grafica
    ------------------------------------------ */
 .navbar-custom {
-    background-color: #a388d2 !important;
+    background-color: #a388d2;
     border-bottom: 1px solid #a568d3;
 }
 
@@ -359,10 +335,14 @@ article.full-width {
     font-weight: bold;
 }
 
+.navbar-custom .navbar-nav {
+    gap: 20rem;
+}
+
 .navbar-custom .nav-link {
     display: inline-block;
-    color: #30243a !important;
-    padding: 7px 16px !important;
+    color: #30243a;
+    padding: 7px 16px;
     border-radius: 18px;
     transition: background-color 0.3s ease-in, color 0.3s ease;
 }
@@ -370,7 +350,7 @@ article.full-width {
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link.active {
     background-color: #c4d7ff;
-    color: #30243a !important;
+    color: #30243a;
 }
 
 .bs-card {
@@ -415,9 +395,7 @@ img {
     height: auto;
 }
 
-/* ------------------------------------------
-   FOOTER (COERENTE SU TUTTE LE PAGINE - ES. 9)
-   ------------------------------------------ */
+/* Footer */
 footer {
     background-color: #a388d2;
     color: #30243a;
