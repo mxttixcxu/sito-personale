@@ -28,6 +28,7 @@ Il progetto copre progressivamente tutti i concetti e i requisiti affrontati nel
 * **Root font-size**: impostato `html { font-size: 16px; }` per il calcolo uniforme di tutte le dimensioni in `rem`.
 * **Gerarchia scalare**: titoli (`h1: 2rem`, `h2: 1.5rem`, `h3: 1.2rem`, `h4: 1rem`) e paragrafi (`1rem`) dimensionati in `rem` per garantire scalabilità e accessibilità.
 * **Leggibilità**: definizione di `line-height: 1.5`, pesi font differenziati (`font-weight: bold / normal`) e fallback universale con `Arial, Helvetica, sans-serif`.
+* **Viewport Units (vh, vw)**: impiego di `min-height: 100vh` sul `body`, padding viewport su header (`3vh 2vw`) e sezioni (`2vh 2vw`), e larghezza dell'indice ancorata alla viewport (`60vw` su desktop e `90vw` su mobile).
 
 ### 2. Posizionamento (Esercizio 6)
 * **Navbar Sticky**: la barra di navigazione principale adotta `position: sticky; top: 0; z-index: 100;` per rimanere visibile e ancorata in cima durante lo scorrimento della pagina.
@@ -36,7 +37,7 @@ Il progetto copre progressivamente tutti i concetti e i requisiti affrontati nel
 ### 3. Layout Flessibile con Flexbox (Esercizio 7)
 * **Blocchi e Articoli**: le sezioni di `index.html` e `about.html` sono flex items (`flex: 1 1 300px;`) all'interno di container flessibili (`display: flex; flex-wrap: wrap;`), che si affiancano su schermi ampi e si riposizionano automaticamente quando lo spazio diminuisce.
 * **Galleria Fotografica Fluida**: in `about.html`, le immagini non usano tabelle statiche ma un contenitore flessibile `.gallery-container` con `flex-wrap: wrap;`.
-* **Breakpoint Mobile**: tramite `@media (max-width: 576px)`, gli elementi della galleria passano automaticamente a **una sola colonna** (`flex: 1 1 100%`) sugli schermi stretti.
+* **Breakpoint Mobile**: tramite `@media (max-width: 600px)`, gli elementi della galleria passano automaticamente a **una sola colonna** (`flex: 1 1 100%`) sugli schermi stretti.
 
 ### 4. Framework Bootstrap 5 (Esercizio 8)
 Integrato all'interno della pagina `contacts.html`:

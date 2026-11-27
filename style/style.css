@@ -1,10 +1,11 @@
-/* tipografia base */
+/* base */
 html {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     background-color: #f7f3fa;
@@ -12,7 +13,7 @@ body {
     line-height: 1.5;
 }
 
-/* titoli in rem */
+/* titoli */
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -64,7 +65,7 @@ header {
     background-color: #a388d2;
     color: #30243a;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3vh 2vw;
     border-bottom: 4px solid #c4d7ff;
 }
 
@@ -85,7 +86,7 @@ header h3 {
     margin: 0;
 }
 
-/* animazione fade in */
+/* animazione */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -97,7 +98,7 @@ header h3 {
     }
 }
 
-/* form e pulsanti */
+/* form */
 input[type="submit"],
 .btn-custom {
     background-color: #aff28b;
@@ -136,7 +137,7 @@ textarea:focus {
     border-color: #89b6ff;
 }
 
-/* navbar sticky */
+/* navbar */
 nav {
     position: sticky;
     top: 0;
@@ -171,14 +172,14 @@ nav ul {
     padding: 12px;
 }
 
-/* flex container per gli articoli */
+/* articoli */
 section.flex-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     background-color: #e5f5f6;
-    padding: 15px;
+    padding: 2vh 2vw;
 }
 
 article {
@@ -196,7 +197,7 @@ article.full-width {
     flex: 1 1 100%;
 }
 
-/* indice interno */
+/* indice */
 #indice {
     background-color: #c4d7ff;
     border: 1px solid #f5b2ff;
@@ -204,7 +205,7 @@ article.full-width {
     padding: 15px 20px;
     margin: 20px auto;
     text-align: center;
-    width: 60%;
+    width: 60vw;
     max-width: 600px;
     animation: fadeInUp 0.4s ease-out;
 }
@@ -240,7 +241,7 @@ article.full-width {
     color: #9152fe;
 }
 
-/* galleria flexbox */
+/* galleria */
 #foto {
     display: flex;
     flex-direction: column;
@@ -259,7 +260,7 @@ article.full-width {
 
 .gallery-item {
     position: relative;
-    flex: 1 1 calc(25% - 20px);
+    flex: 1 1 200px;
     min-width: 180px;
     max-width: 250px;
     margin: 0;
@@ -277,7 +278,7 @@ article.full-width {
     transition: transform 0.25s ease;
 }
 
-/* didascalia absolute su relative */
+/* didascalia */
 .gallery-item figcaption {
     position: absolute;
     bottom: 0;
@@ -300,19 +301,19 @@ article.full-width {
     background: rgba(112, 65, 143, 0.92);
 }
 
-/* mobile: galleria a 1 colonna */
-@media (max-width: 576px) {
+/* mobile */
+@media (max-width: 600px) {
     .gallery-item {
         flex: 1 1 100%;
         max-width: 100%;
     }
 
     #indice {
-        width: 90%;
+        width: 90vw;
     }
 }
 
-/* personalizzazione bootstrap 5 */
+/* bootstrap */
 .navbar-custom {
     background-color: #a388d2;
     border-bottom: 1px solid #a568d3;
@@ -324,7 +325,7 @@ article.full-width {
 }
 
 .navbar-custom .navbar-nav {
-    gap: 2rem;
+    gap: 20vw;
 }
 
 .navbar-custom .nav-link {
@@ -363,7 +364,7 @@ article.full-width {
     color: #43834b;
 }
 
-/* immagini generali e figure */
+/* immagini */
 article#home,
 article#obiettivi {
     display: flex;
@@ -388,7 +389,7 @@ footer {
     background-color: #a388d2;
     color: #30243a;
     text-align: center;
-    padding: 1.5rem;
+    padding: 3vh 1vw;
     margin-top: 2rem;
     border-top: 4px solid #c4d7ff;
 }
